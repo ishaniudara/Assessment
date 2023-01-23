@@ -30,12 +30,13 @@ public class Feature1PageObjects {
 
 	}
 
-
+//This method is used to verify amazon logo
 	public boolean verifyLogo() {
 		Log.info("Amazon logo is displayed");
 		return 	PageFactoryAmazon.pf.logo.isDisplayed();
 	
 	}
+	// This method is used to click category drop down and select books
 	
 	public void clickOnDropDown(String str) throws InterruptedException {
 //		PageFactoryAmazon.pf.searchDroDown.click();	
@@ -47,8 +48,7 @@ public class Feature1PageObjects {
 	}
 
 	/**
-	 * @param arg1
-	 * @throws InterruptedException 
+	 * This method is used to search in search bar
 	 */
 	public void searchItem(String arg1) throws InterruptedException {
 		PageFactoryAmazon.pf.serachBar.sendKeys(arg1);
@@ -59,7 +59,7 @@ public class Feature1PageObjects {
 	}
 
 	/**
-	 * 
+	 * This method is used to click on books above 4 stars
 	 */
 	public void clickOnFourStars() {
 		
@@ -70,8 +70,7 @@ public class Feature1PageObjects {
 	}
 
 	/**
-	 * @param readProperty
-	 * @throws InterruptedException 
+	 *This method is used to select language
 	 */
 	public void selectLanguage(String readProperty) throws InterruptedException {
 		Thread.sleep(3000);
@@ -83,7 +82,7 @@ public class Feature1PageObjects {
 	}
 
 	/**
-	 * @throws InterruptedException 
+	 * This method is used to get book name
 	 * 
 	 */
 	public String getName() throws InterruptedException {
@@ -95,7 +94,7 @@ public class Feature1PageObjects {
 	}
 
 	/**
-	 * @throws InterruptedException 
+	 * This method is used to click on book
 	 * 
 	 */
 	public void clickOnBook() throws InterruptedException {
@@ -106,14 +105,14 @@ public class Feature1PageObjects {
 	}
 
 	/**
-	 * 
+	 * This method is used to get price
 	 */
 	public String getPrice() {
 		 return PageFactoryAmazon.pf.price.getText();
 	}
 
 	/**
-	 * @throws InterruptedException 
+	 * This method is used to set quantity
 	 * 
 	 */
 	public void setQty() throws InterruptedException {
@@ -123,7 +122,7 @@ public class Feature1PageObjects {
 	}
 
 	/**
-	 * @return
+	 * This method is used to get book title
 	 */
 	public String getBookTitle() {
 		
@@ -131,7 +130,7 @@ public class Feature1PageObjects {
 	}
 
 	/**
-	 * @throws InterruptedException 
+	 * This method is used to click on add to cart
 	 * 
 	 */
 	public void clickAddToCrt() throws InterruptedException {
@@ -141,7 +140,7 @@ public class Feature1PageObjects {
 	}
 
 	/**
-	 * @throws InterruptedException 
+	 * This method is used to click on go to cart button
 	 * 
 	 */
 	public void clickGoToCrt() throws InterruptedException {
@@ -152,7 +151,7 @@ public class Feature1PageObjects {
 	}
 
 	/**
-	 * @return
+	 * This method is used to get book title in cart
 	 */
 	public String getCartProductTitle() {
 		
@@ -160,7 +159,7 @@ public class Feature1PageObjects {
 	}
 
 	/**
-	 * @return
+	 * This method is used to search in quantity in cart
 	 */
 	public String getCartQty() {
 		
@@ -168,7 +167,7 @@ public class Feature1PageObjects {
 	}
 
 	/**
-	 * @return
+	 * This method is used to get price in cart
 	 */
 	public String getCartPrice() {
 		
@@ -176,7 +175,7 @@ public class Feature1PageObjects {
 	}
 
 	/**
-	 * @return
+	 * This method is used to get cart header
 	 */
 	public boolean getCartHeader() {
 		
@@ -184,7 +183,7 @@ public class Feature1PageObjects {
 	}
 
 	/**
-	 * @throws InterruptedException 
+	 *This method is used to delete item in cart
 	 * 
 	 */
 	public void deleteCart() throws InterruptedException {
@@ -196,8 +195,7 @@ public class Feature1PageObjects {
 	}
 
 	/**
-	 * @return
-	 * @throws InterruptedException 
+	 * This method is used to get price of cart 
 	 */
 	public String getEmptyCartPrice() throws InterruptedException {
 		Thread.sleep(3000);

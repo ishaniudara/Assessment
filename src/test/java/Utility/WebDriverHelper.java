@@ -8,6 +8,10 @@ import java.net.MalformedURLException;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 /**
  * @author Udara Vithanage
@@ -29,10 +33,21 @@ public static WebDriver startUpWebDriver(String Browser,String paths)
 	Log.info("Start web driver");
 	if (Browser.equals("Chrome")) {
 		System.setProperty("webdriver.chrome.driver", paths);
-		Wdriver = new ChromeDriver();
+		Wdriver = new ChromeDriver();}
+	
+ else if (Browser.equals("FireFox")) {
+	 //System.setProperty("webdriver.chrome.driver", paths);
+		Wdriver = new FirefoxDriver();}
+	
+ else if (Browser.equals("IE")) {
+	//System.setProperty("webdriver.chrome.driver", paths);
+	Wdriver = new  InternetExplorerDriver();
+	}
+	
+
 		Wdriver.manage().window().maximize();
 		
-	}
+	
 		return Wdriver;
 }
 
